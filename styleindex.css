@@ -1,4 +1,41 @@
 body {
-    background-image: url(img\Background.jpg);
+    background-image: url(img/Background.jpg);
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background: rgba(93, 84, 0, 0.521);
+}
+.navbar-brand {
+    margin-left: -20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    margin-right: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
 }
