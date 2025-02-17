@@ -1,5 +1,3 @@
-
-
 .jumbotron-img {
   width: 100%;
   height: 100%;
@@ -148,4 +146,54 @@
     color: var(--btn-bg);
     border-color: var(--btn-text);
   }
+
+@media (max-width: 768px) {
+  .jumbotron-text {
+    width: 80%; 
+    top: 50%;  
+  }
+
+  .jumbotron-text h1 {
+    font-size: 24px; 
+  }
+
+  .jumbotron-text p {
+    font-size: 16px; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .about-section .row {
+    padding: 0 10px; 
+  }
+
+  .about-section .col-md-4 {
+    margin-bottom: 20px; 
+  }
+}
+
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+}
+
+/* Make footer icons responsive */
+@media (max-width: 768px) {
+  .btn-floating {
+    font-size: 1.5rem; 
+    margin: 0 5px;
+  }
+}
   
