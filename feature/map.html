@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="styleindex.css">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Map</title>
+    <link rel="stylesheet" href="cssfeature/stylemap.css">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -15,10 +15,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container d-flex align-items-center">
-            <a href="index.html">
-                <img src="img/ottoman-icon.png" class="img-fluid me-3" alt="Ottoman-icon" width="150">
+            <a href="/index.html">
+                <img src="../img/ottoman-icon.png" class="img-fluid me-3" alt="Ottoman-icon" width="150">
             </a>
-            <a class="navbar-brand text-white fs-2 fw-bold" href="index.html">
+            <a class="navbar-brand text-white fs-2 fw-bold" href="/index.html">
                 Ottoman History
             </a>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
@@ -28,71 +28,92 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link text-white active fs-5" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white fs-5" href="feature\overview.html">Overview</a></li>
-                    <li class="nav-item"><a class="nav-link text-white fs-5" href="feature\map.html">Maps</a></li>
-                    <li class="nav-item"><a class="nav-link text-white fs-5" href="feature\leader.html">Leader</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active fs-5" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5" href="overview.html">Overview</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5" href="map.html">Maps</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fs-5" href="leader.html">Leader</a></li>
                     <li class="nav-item"><a class="nav-link text-white fs-5" href="About.html">About</a></li>
                 </ul>
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi theme-icon-active" data-theme-icon-active="bi-brightness-high" style="font-size: 1.75rem;"></i>
-                    </button>                    
+                        <i class="bi theme-icon-active" data-theme-icon-active="bi-brightness-high"
+                            style="font-size: 1.75rem;"></i>
+                    </button>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li>
-                            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light">
-                                <i class="bi bi-brightness-high me-2 fs-5" data-theme-icon="bi-brightness-high"></i> Light
+                            <button class="dropdown-item d-flex align-items-center" type="button"
+                                data-bs-theme-value="light">
+                                <i class="bi bi-brightness-high me-2 fs-5" data-theme-icon="bi-brightness-high"></i>
+                                Light
                             </button>
                         </li>
                         <li>
-                            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark">
+                            <button class="dropdown-item d-flex align-items-center" type="button"
+                                data-bs-theme-value="dark">
                                 <i class="bi bi-moon-fill me-2 fs-5" data-theme-icon="bi-moon-fill"></i> Dark
                             </button>
                         </li>
                         <li>
-                            <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto">
+                            <button class="dropdown-item d-flex align-items-center" type="button"
+                                data-bs-theme-value="auto">
                                 <i class="bi bi-circle-half me-2 fs-5" data-theme-icon="bi-circle-half"></i> Auto
                             </button>
                         </li>
                     </ul>
-                </div>                
+                </div>
             </div>
         </div>
     </nav>
+<!-- Add after the navbar section and before the slider -->
+<div class="navbar-spacer"></div>
 
-    <!-- Jumbotron -->
-    <section class="jumbotron">
-        <div class="jumbotron-overlay">
-            <img src="img/Background.jpg" class="jumbotron-img" alt="Ottoman background">
-            <div class="jumbotron-text">
-                <h1>Sejarah Kerajaan Ottoman</h1>
-                <p>Pembahasan terkait perkembangan Kerajaan Ottoman mulai dari masa awal, kejayaan, serta masa akhir.
-                </p>
-            </div>
+<!-- Update the slider section with titles -->
+<div class="slider">
+    <div class="slides">
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1308.png" alt="1308-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1308</div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <div class="container about-section mt-3 pt-3">
-        <div class="row text-center mb-3">
-            <div class="col">
-                <h2>Penjelasan</h2>
-            </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1370.png" alt="1370-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1370</div>
         </div>
-        <div class="row justify-content-center text-center">
-            <div class="col-md-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptas iusto sunt ullam minus
-                necessitatibus dolores! Tempora ex, hic dolorum molestiae laborum maxime! Autem dolorum laudantium atque
-                dolore debitis iure?
-            </div>
-            <div class="col-md-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum tempora saepe ipsa? Impedit, eos
-                aperiam? Reiciendis natus nesciunt quibusdam placeat vitae eius eveniet tenetur, aliquid est officia
-                neque,
-                corporis architecto.
-            </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1456.png" alt="1456-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1456</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1517.png" alt="1517-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1517</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1543.png" alt="1543-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1543</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1576.png" alt="1576-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1576</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1589.png" alt="1589-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1589</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1900.png" alt="1900-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1900</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1919.png" alt="1919-img">
+            <div class="slide-title">Kekaisaran Ottoman pada 1919</div>
+        </div>
+        <div class="slide-container">
+            <img class="slide" src="./img-map-ottoman/1924.png" alt="1924-img">
+            <div class="slide-title">Republik Turki pada 1924</div>
         </div>
     </div>
+    <button class="prev" onclick="prevSlide()">&#10094</button>
+    <button class="next" onclick="nextSlide()">&#10095</button>
+</div>
 
     <!-- Footer -->
     <footer class="text-center bg-warning-subtle text-dark mt-5">
@@ -176,9 +197,45 @@
                 });
             });
         })();
-
     </script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const slideContainers = document.querySelectorAll(".slide-container");
+        let slideIndex = 0;
+        
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+        
+        function initializeSlider() {
+            if (slideContainers.length > 0) {
+                slideContainers[slideIndex].classList.add("displaySlide");
+            }
+        }
+        
+        function showSlide(index) {
+            if (index >= slideContainers.length) {
+                slideIndex = 0;
+            }
+            else if (index < 0) {
+                slideIndex = slideContainers.length - 1;
+            }
+        
+            slideContainers.forEach(container => {
+                container.classList.remove("displaySlide");
+            });
+            slideContainers[slideIndex].classList.add("displaySlide");
+        }
+        
+        function prevSlide() {
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+        
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+    </script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

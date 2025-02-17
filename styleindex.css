@@ -1,41 +1,151 @@
-body {
-    background-image: url(img/Background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+
+
+.jumbotron-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.navbar {
-    background: rgba(93, 84, 0, 0.521);
+.jumbotron-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 55%;
 }
-.navbar-brand {
-    margin-left: -20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+.jumbotron-text h1 {
+    font-size: 36px;
+    font-weight: bold;
 }
-.nav-link {
-    position: relative;
-    transition: color 0.3s ease-in-out;
-    margin-right: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+
+.jumbotron-text p {
+    font-size: 20px;
 }
-.nav-link::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000000;
-    transition: width 0.3s;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
+
+/* Light Theme */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --navbar-bg: rgba(63, 50, 1, 0.732);
+    --navbar-text: #ffffff;
+    --jumbotron-bg: rgba(0, 0, 0, 0.6);
+    --footer-bg: #f8f9fa;
+    --btn-bg: #000;
+    --btn-text: #fff;
+  }
+  
+  /* Dark Theme */
+  [data-bs-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --navbar-bg: rgba(33, 37, 41, 0.9);
+    --navbar-text: #f8f9fa;
+    --jumbotron-bg: rgba(0, 0, 0, 0.8);
+    --footer-bg: #181818;
+    --btn-bg: #e0e0e0;
+    --btn-text: #000;
+  }
+
+  [data-bs-theme="dark"] .btn-outline-dark {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
 }
-.nav-link:hover::after {
-    width: 100%;
+
+[data-bs-theme="dark"] .btn-outline-dark:hover {
+    background-color: #fff;
+    color: #000; 
 }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .navbar {
+    background: var(--navbar-bg);
+  }
+  
+  .navbar-brand, .nav-link {
+    color: var(--navbar-text);
+  }
+
+  /* Responsive Navbar */
+.navbar-nav {
+  display: flex;
+  gap: 15px;
+}
+
 .navbar-toggler {
-    border: none;
+  border: none;
+  outline: none;
 }
+
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
+
+/* Animasi garis bawah pada hover */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-link {
+    display: block;
+    padding: 10px;
+  }
+}
+  
+  .nav-link::after {
+    background: var(--text-color);
+  }
+  
+  .jumbotron-text {
+    background: var(--jumbotron-bg);
+  }
+  
+  footer {
+    background: var(--footer-bg);
+  }
+  
+  .btn-outline-dark {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border-color: var(--btn-bg);
+  }
+  
+  .btn-outline-dark:hover {
+    background-color: var(--btn-text);
+    color: var(--btn-bg);
+    border-color: var(--btn-text);
+  }
+  
